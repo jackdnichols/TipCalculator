@@ -8,7 +8,7 @@
 
     <Grid RowSpacing="0" Padding="0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="180"></ColumnDefinition>
+            <ColumnDefinition Width="190"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="120"></ColumnDefinition>
         </Grid.ColumnDefinitions>
@@ -41,12 +41,12 @@
         <Label Grid.Row="2" Grid.Column="0" 
                Text="Total Bill:" 
                Margin="20,10,0,10" 
-               FontSize="Large"></Label>
+               FontSize="16"></Label>
 
         <Entry Grid.Row="2" Grid.Column="2" 
                Placeholder="Amount" 
                Margin="10,0,20,10" 
-               FontSize="Large"
+               FontSize="16"
                x:Name="txtTotalBill"
                HorizontalTextAlignment="End"
                TextChanged="txtTotalBill_ValueChanged"
@@ -54,13 +54,13 @@
         
         <Label Grid.Row="3" Grid.Column="0"
                Text="Tip:"
-               FontSize="Large"
+               FontSize="16"
                Margin="20,10,0,10" >
         </Label>
 
         <Label Grid.Row="3" Grid.Column="2"
                x:Name="lblTip"
-               FontSize="Large"
+               FontSize="16"
                HorizontalTextAlignment="End"
                Margin="10,10,20,10" >
         </Label>
@@ -68,13 +68,14 @@
         <Label Grid.Row="4" Grid.Column="0" 
                Text="Total Amount:" 
                Margin="20,0,0,0" 
-               FontSize="Large"></Label>
+               FontSize="16" 
+               FontAttributes="Bold"></Label>
 
         <Label Grid.Row="4" Grid.Column="2" 
                Margin="10,0,20,0" 
-               FontSize="Large"
+               FontSize="16"
                HorizontalTextAlignment="End"
-               x:Name="lblTotalAmount"></Label>
+               x:Name="lblTotalAmount" FontAttributes="Bold"></Label>
 
         <Slider Grid.Row="5" Grid.Column="0" 
                 x:Name="sldPercentage" 
@@ -87,7 +88,7 @@
                x:Name="txtPercentage" 
                Text="{Binding Path=Value, StringFormat='{0}%'}"
                Margin="10,0" 
-               FontSize="Large"
+               FontSize="16"
                BindingContext="{x:Reference sldPercentage}"
                ></Label>
 
