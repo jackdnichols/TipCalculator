@@ -92,12 +92,14 @@
                BindingContext="{x:Reference sldPercentage}"
                ></Label>
 
-        <Label x:Name="lbl3" Grid.Row="7" Grid.ColumnSpan="3"
-                     VerticalTextAlignment="Center"
-                     HorizontalTextAlignment="Center"
-                     HorizontalOptions="Fill" Text="Title Bar"
-                     BackgroundColor="Blue" TextColor="White" />
-
-
+        <Grid Grid.Row="7" Grid.ColumnSpan="3" BackgroundColor="Blue" >
+            <Label x:Name="lbl3" 
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="Fill" Text="If you see me eating a salad in a restaurant, I've been kidnapped and I'm trying to signal you."
+                    Margin="10,0,10,0"
+                    FontSize="16"
+                    TextColor="White" />
+        </Grid>
     </Grid>
 </ContentPage>
