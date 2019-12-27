@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TipCalculator.MainPage">
+
+    <Grid RowSpacing="0" Padding="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Grid.Column="0" 
+            Source="tip_logo.png"></Image>
+        
+        <Label x:Name="lbl1" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                HeightRequest="50"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Fill" 
+                Text="Jack's Tip Calculator"
+                BackgroundColor="Green" 
+                TextColor="White" 
+                FontSize="26" />
+
+        <Label Grid.Row="2" Grid.Column="0" 
+               Text="Total Bill:" 
+               Margin="20,10,0,10" 
+               FontSize="Large"></Label>
+
+        <Entry Grid.Row="2" Grid.Column="2" 
+               Placeholder="Amount" 
+               Margin="10,0,20,10" 
+               FontSize="Large"
+               x:Name="txtTotalBill"
+               HorizontalTextAlignment="End"
+               TextChanged="txtTotalBill_ValueChanged"
+               />
+        
+        <Label Grid.Row="3" Grid.Column="0"
+               Text="Tip:"
+               FontSize="Large"
+               Margin="20,10,0,10" >
+        </Label>
+
+        <Label Grid.Row="3" Grid.Column="2"
+               x:Name="lblTip"
+               FontSize="Large"
+               HorizontalTextAlignment="End"
+               Margin="10,10,20,10" >
+        </Label>
+
+        <Label Grid.Row="4" Grid.Column="0" 
+               Text="Total Amount:" 
+               Margin="20,0,0,0" 
+               FontSize="Large"></Label>
+
+        <Label Grid.Row="4" Grid.Column="2" 
+               Margin="10,0,20,0" 
+               FontSize="Large"
+               HorizontalTextAlignment="End"
+               x:Name="lblTotalAmount"></Label>
+
+        <Slider Grid.Row="5" Grid.Column="0" 
+                x:Name="sldPercentage" 
+                Minimum="0" Maximum="20" 
+                ValueChanged="sldPercentage_ValueChanged" 
+                Margin="20,0,10,0" BackgroundColor="#aaaaaa"
+                ></Slider>
+
+        <Label Grid.Row="5" Grid.Column="1" 
+               x:Name="txtPercentage" 
+               Text="{Binding Path=Value, StringFormat='{0}%'}"
+               Margin="10,0" 
+               FontSize="Large"
+               BindingContext="{x:Reference sldPercentage}"
+               ></Label>
+
+        <Label x:Name="lbl3" Grid.Row="7" Grid.ColumnSpan="3"
+                     VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     HorizontalOptions="Fill" Text="Title Bar"
+                     BackgroundColor="Blue" TextColor="White" />
+
+
+    </Grid>
+</ContentPage>
