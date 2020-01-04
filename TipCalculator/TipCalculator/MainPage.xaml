@@ -50,6 +50,7 @@
                x:Name="txtTotalBill"
                HorizontalTextAlignment="End"
                TextChanged="txtTotalBill_ValueChanged"
+               Keyboard="Numeric"
                />
         
         <Label Grid.Row="3" Grid.Column="0"
