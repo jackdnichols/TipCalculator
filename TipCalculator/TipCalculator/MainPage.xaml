@@ -80,7 +80,8 @@
 
         <Slider Grid.Row="5" Grid.Column="0" 
                 x:Name="sldPercentage" 
-                Minimum="0" Maximum="20" 
+                Minimum="0" 
+                Maximum="20" 
                 ValueChanged="sldPercentage_ValueChanged" 
                 Margin="20,0,10,0" BackgroundColor="#aaaaaa"
                 ></Slider>

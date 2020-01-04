@@ -16,13 +16,10 @@ namespace TipCalculator
         public MainPage()
         {
             InitializeComponent();
-
-            
         }
 
         private void sldPercentage_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-           // this.txtPercentage.Text = "Tip " + this.sldPercentage.Value.ToString() + "%";
             CalcTotal();
         }
 
@@ -36,6 +33,10 @@ namespace TipCalculator
             double totalBill = 0;
             double tipAmount = 0;
             double totalAmount = 0;
+            double StepValue = 1;
+
+            var newStep = Math.Round(this.sldPercentage.Value / StepValue);
+            sldPercentage.Value = newStep * StepValue;
 
             double.TryParse(this.txtTotalBill.Text, out totalBill);
             tipAmount = totalBill * this.sldPercentage.Value / 100;
